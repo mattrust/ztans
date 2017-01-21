@@ -1,0 +1,11 @@
+1.2 :
+No changes. Included all the additionnal files : alphabet figures and translations (Russian, Ukrainian, Polish, Czech and Turkish). See AUTHORS for the contributor's names
+
+1.1 :
+Minor bug fixes. 130 more figures. Adjustable precision of the figure recognition. Remembering of the solved figures. Allow to change the size of the tans. NLS (added by Arturo Aldama Espinosa).
+
+1.0 :
+Bug fixes. 130 more figures. Help functions. License is now GPL.
+
+0.1 :
+initial release.

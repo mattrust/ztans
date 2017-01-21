@@ -1,0 +1,69 @@
+install
+-=-=-=-
+
+delete the old version (see below)
+
+unarchive the file and go to gTans directory :
+
+> gunzip gtans.tar.gz
+> tar xvf gtans.tar
+> cd gtans-1.2
+
+
+(optionnally) edit the makefile. You may also edit po/Makefile
+and misc/Makefile, for example for Solaris you should change
+share/locale to lib/locale.
+
+
+Compile the program (and build the NLS catalogs):
+
+> make
+
+Copy the program to /usr/bin/ ,
+other files to /usr/share/gtans/ ,
+create a default config file
+(and install the catalogs) :
+
+> su
+> make install
+> exit
+
+
+Uninstall
+-=-=-=-=-
+
+>su
+>make uninstall
+>exit
+
+You should delete the .gtans directory in each user's home directory.
+The NLS catalogs are not removed.
+
+
+Uninstalling a previous version (0.1 or 1.0)
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+You should do this BEFORE installing the new version and ONLY IF:
+-An old version is installed :-)
+-It was installed from sources (if you installed it from a RPM or
+ DEB package use your package manager).
+-You didn't change the makefile (in wich case you have to remember
+ where you decided to put the files).
+
+>su
+>make uninstallold
+>exit
+
+In fact this simply deletes the following files and directories:
+/usr/local/bin/gtans
+/usr/local/lib/gtans/*
+
+You should manually remove the config.gtans file in the users home
+directory
+ 
+
+
+
+
+
+

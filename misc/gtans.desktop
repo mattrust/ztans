@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tangrams
+Name[es]=Tangramas
+Comment=gtans
+Comment[es]=gtans
+Exec=gtans
+Icon=gtans_icon.png
+Terminal=0
+Type=Application

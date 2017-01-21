@@ -1,0 +1,126 @@
+Pravidla této hry
+-=-=-=-=-=-=-=-=-
+
+Pohybujte s kostkami (v originále tany), dokud dohromady neposkládáte
+figuru, která je nakreslená v pravém horním rohu. V¾dy se musí pou¾ít
+v¹ech sedmi kostek a ¾ádné se nesmí pøekrývat.
+
+Pohyb kostky se provádí tak, ¾e kliknete levým tlaèítkem na kostku
+a jednodu¹e ji pøetáhnete na jiné místo. Pokud chcete kostku otoèit,
+kliknìte vedle vybrané kostky. Kostku lze pøevrátit kliknutím pravého
+tlaèítka my¹i - bez toho se neobejdete u kosodélníkové kostky.
+
+Pokud jste zaèáteèníkem v Tangramu, mìli byste zkusit prvních 10 figur
+ze souboru default.figures. Ostatní soubory nejsou nijak setøídìny a
+navíc obsahují nìkteré velmi slo¾ité figury.
+
+Pokud jste slo¾ili figuru, zmìní se barva kostek a siluety. ji¾ slo¾ené
+figury se pamatují ve speciálních  souborech v domovském adresáøi (napø.
+~/.gtans/afile.figures.status pro figury v souboru afile.figures).
+
+
+Ukázat kostku
+-=-=-=-=-=-=-
+
+Tato ikonka uká¾e pozici jedné kostky. Ka¾dé dal¹í kliknutí na ikonku
+uká¾e dal¹í kostku.
+
+
+Ukázat obrys
+-=-=-=-=-=-=
+
+Uká¾e obrys figury na hlavní plo¹e, co¾ hru velmi usnadní.
+
+
+Nastavení
+-=-=-=-=-=-
+
+Vìt¹ina mo¾ností nastavení se týká barev ve høe. Na hlavní plo¹e si
+mù¾ete nastavit texturu (pixmapový soubor) místo barev. Nìkteré
+pøedvolené soubory zde ji¾ jsou (nemohu si vzpomenout, odkud je mám),
+ale mù¾ete si zvolit kterýkoliv jiný soubor na celém disku (napø.
+soubor v /usr/share/pixmaps/). Na 8-bitovém displeji se barvy nemusí
+zobrazit správnì (GTK se v¾dy sna¾í najít barvu, která nejlépe odpovídá
+po¾adavkùm).
+
+
+Nastavení/ Velikost kostek / Zvìt¹it
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Zvìt¹í velikost kostek o 5% relativnì k velikosti hrací plochy. Pokud
+zmìníte velikost okna, velikost kostek bude pøimìøenì upravena také.
+
+
+Nastavení/ Velikost kostek / Zmen¹it
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Zmen¹í velikost kostek o 4.76%.
+
+
+Nastavení / Tolerance
+-=-=-=-=-=-=-=-=-=-=-
+
+Zmìna tolerance porovnávání pozic kostek a chtìného výsledku. Ni¾¹í
+tolerance hru zjednodu¹uje.
+
+
+Nastavení / Rotace
+-=-=-=-=-=-=-=-=-=
+
+Rotace po èástech otáèí kostku o 11.5 stupòù. Plynulá rotace znamená
+o dost obtí¾nìj¹í hru a mìli byste ji pou¾ívat pouze v pøípadì, ¾e
+rotaci po èástech vyslovenì nesná¹íte.
+
+
+Nastavení / Soubor s figurami
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Umo¾òuje vybrat jiný soubor s figurami.
+
+
+Nastavení / Ulo¾ení konfigurace
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Ulo¾ení konfigurace do souboru v domovském adresáøi
+(~/.gtans/.gtansrc).
+
+
+Rùzné / Zapomenout slo¾enou figuru
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Nastaví stav právì skládané figury na 'neslo¾ená'.
+
+
+Rùzné / Zapomenout v¹echny slo¾ené figury
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Oznaèí v¹echny figury z pou¾ívaného souboru jako neslo¾ené.
+
+
+Dodìlat:
+-=-=-=-=
+
+-editor figur (a¾ naposledy!).
+-pøidat více figur.
+-Gnome verze.
+
+
+
+Copyright (C) 1999  Philippe Banwarth
+email: bwt@altern.org
+smail: Philippe Banwarth, 8 sente du milieu des Gaudins, 95150 Taverny, France.
+ 
+Tento program je volné programové vybavení; mù¾ete jej ¹íøit a
+modifikovat podle ustanovení Obecné veøejné licence GNU, vydávané Free
+Software Foundation; a to buï verze 2 této licence anebo (podle va¹eho
+uvá¾ení) kterékoli pozdìj¹í verze.
+
+Tento program je roz¹iøován v nadìji, ¾e bude u¾iteèný, av¹ak BEZ
+JAKÉKOLI ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo
+VHODNOSTI PRO URÈITÝ ÚÈEL.
+Dal¹í podrobnosti hledejte v Obecné veøejné licenci GNU.
+
+Kopii Obecné veøejné licence GNU jste mìl obdr¾et spolu s tímto
+programem; pokud se tak nestalo, napi¹te o ni Free Software Foundation,
+Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+

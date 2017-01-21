@@ -1,0 +1,237 @@
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Valek Filippov <frob@df.ru>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gtans\n"
+"POT-Creation-Date: 2000-03-14 12:07+0100\n"
+"PO-Revision-Date: 2000-03-14 12:07+0400\n"
+"Last-Translator: Valek Filippov <frob@df.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Transfer-Encoding: 8-bits\n"
+
+#: callbacks.c:269
+msgid "User config file saved."
+msgstr "Файл конфигурации пользователя сохранен."
+
+#: callbacks.c:271
+msgid "Can't save config file."
+msgstr "Невозможно сохранить файл конфигурации."
+
+#: callbacks.c:279
+msgid "About gTans..."
+msgstr "О программе..."
+
+#: callbacks.c:318
+msgid "Can't read help file, Sorry."
+msgstr "Невозможно прочесть файл справки. Извините."
+
+#: callbacks.c:321
+msgid "gTans help..."
+msgstr "gTans справка..."
+
+# this string should be as short as possible.
+#: callbacks.c:451
+msgid "Click into to move, around to rotate. Right-click to flip."
+msgstr "Щелчок для перемещения, движение вокруг для поворота. Правая кнопка - отражение."
+
+#: callbacks.c:473
+msgid "Well done. Try another one ?"
+msgstr "Отлично! Еще разок?"
+
+#: callbacks.c:630
+msgid "Select a figures file..."
+msgstr "Выбрать файл фигур..."
+
+#: callbacks.c:634
+msgid "Select a texture (xpm file)..."
+msgstr "Выбрать текстуру (xpm-файл)..."
+
+#: callbacks.c:675
+#, c-format
+msgid "%d figures loaded."
+msgstr "%d фигуры загружены."
+
+#: callbacks.c:680
+msgid "Can't load figure file."
+msgstr "Невозможно загрузить файл фигур."
+
+#: callbacks.c:742
+msgid "Select a color..."
+msgstr "Выбрать цвет..."
+
+#: interface.c:127
+msgid "Game"
+msgstr "Игра"
+
+#: interface.c:143
+msgid "Quit"
+msgstr "Выход"
+
+#: interface.c:151
+msgid "Preferences"
+msgstr "Настройки"
+
+#: interface.c:167
+msgid "Tans"
+msgstr "Танграмы"
+
+#: interface.c:183 interface.c:215 interface.c:247
+msgid "Color..."
+msgstr "Цвета..."
+
+#: interface.c:191 interface.c:223 interface.c:255
+msgid "Texture..."
+msgstr "Текстура..."
+
+#: interface.c:199
+msgid "Hilighted tan"
+msgstr "Подсвеченный тан"
+
+#: interface.c:231
+msgid "Background"
+msgstr "Фон"
+
+#: interface.c:263
+msgid "Outline help color..."
+msgstr "Цвет контура подсказки..."
+
+#: interface.c:280
+msgid "Silhouette color..."
+msgstr "Цвет силуэта..."
+
+#: interface.c:288
+msgid "Silhouette background..."
+msgstr "Цвет фона силуэта..."
+
+#: interface.c:296
+msgid "Solved figure bg..."
+msgstr "Фон сложенной фигуры..."
+
+#: interface.c:304
+msgid "Help tan color..."
+msgstr "Цвет тана при помощи..."
+
+#: interface.c:321
+msgid "Tans size"
+msgstr "Размер тана"
+
+#: interface.c:337
+msgid "Increase"
+msgstr "Увеличить"
+
+#: interface.c:345
+msgid "Decrease"
+msgstr "Уменьшить"
+
+#: interface.c:353
+msgid "Accuracy"
+msgstr "Точность"
+
+#: interface.c:369
+msgid "High"
+msgstr "Высокая"
+
+#: interface.c:378
+msgid "Medium"
+msgstr "Средняя"
+
+#: interface.c:387
+msgid "Low"
+msgstr "Низкая"
+
+#: interface.c:397
+msgid "Rotation"
+msgstr "Вращение"
+
+#: interface.c:413
+msgid "Continuous"
+msgstr "Продолженное"
+
+#: interface.c:422
+msgid "Step by step"
+msgstr "Шаг за шагом"
+
+#: interface.c:441
+msgid "Figures file..."
+msgstr "Файл фигур..."
+
+#: interface.c:458
+msgid "Save config"
+msgstr "Сохранить конфигурацию"
+
+#: interface.c:466
+msgid "Misc."
+msgstr "Разное"
+
+#: interface.c:482
+msgid "About..."
+msgstr "О программе..."
+
+#: interface.c:490
+msgid "Help..."
+msgstr "Справка..."
+
+#: interface.c:507
+msgid "Clear figure status"
+msgstr "Очистить состояние фигуры"
+
+#: interface.c:515
+msgid "Clear all figures status"
+msgstr "Очистить состояние всех фигур"
+
+#: interface.c:588
+msgid "Figure "
+msgstr "Фигура "
+
+#: interface.c:615
+msgid "Unselect tan"
+msgstr "Невыделенный тан"
+
+#: interface.c:640
+msgid "Show a tan"
+msgstr "Показать тан"
+
+#: interface.c:649
+msgid "Show outline"
+msgstr "Показать контур"
+
+#: interface.c:791
+msgid "Select a file"
+msgstr "Выбрать файл"
+
+#: interface.c:831
+msgid "Select color"
+msgstr "Выбрать цвет"
+
+#: interface.c:880
+msgid "About gTans"
+msgstr "О программе gTans"
+
+#: interface.c:904 interface.c:967
+msgid "Close"
+msgstr "Закрыть"
+
+#: interface.c:935
+msgid "gTans help"
+msgstr "gTans справка"
+
+#: main.c:1802
+msgid "Select a tan."
+msgstr "Выбрать тан."
+
+#: main.c:1804
+msgid "No figure loaded."
+msgstr "Нет загруженной фигуры."
+
+#: support.c:118
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr "Не удалось найти файл изображения: %s"
+
+#: support.c:127
+#, c-format
+msgid "Error loading pixmap file: %s"
+msgstr "Ошибка загрузки файла изображения: %s"

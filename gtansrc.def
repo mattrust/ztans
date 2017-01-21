@@ -1,0 +1,20 @@
+gTans v1.0 config file 1
+ispx 1
+pxcol 32768 32768 50000
+pxnam XPMDIRgtans_burtwood.xpm
+ispx 1
+pxcol 40000 40000 65535
+pxnam XPMDIRgtans_brightburtwood.xpm
+ispx 1
+pxcol 65535 32768 32768
+pxnam XPMDIRgtans_paper.xpm
+phlp 65535 0 0
+ffg 0 0 0
+fbg 65535 65535 65535
+fhlp 32767 32767 32767
+fchk 57365 65535 53738
+fgnam FIGDIRdefaultfigs.gtans
+accur 1
+rot 2048
+0.125
+end of config file 1

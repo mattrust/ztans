@@ -1,0 +1,100 @@
+.TH gtans 6x "February 2000" \"
+.\" NAME should be all caps, SECTION should be 1-8, maybe w/ subsection
+.\" other parms are allowed: see man(7), man(1)
+.SH NAME
+gtans \- Tangram game for X
+.SH SYNOPSIS
+.B gtans
+.I "[no options]"
+.br
+.SH "DESCRIPTION"
+Gtans is a tangram game that runs in X. Tangram is a kind of puzzle game where the player has to arrange a set of pieces to match a given shape.
+
+
+.SH OPTIONS
+	No command-line options
+.br 
+	Use the graphical interface to customize the program. See below.
+
+.SH USAGE
+.PP	The rules of the game are simple:
+move the pieces (known as tans) until they match
+the figure drawn on the right window.
+You must always use the seven tans and they should not
+be laid on top of one another.
+
+To move a tan, click and drag it with left mouse button,
+for rotation click AROUND it.
+You can flip the selected tan by right-clicking. This
+is usefull for the parallelogram tan (all positions
+can not be reached by rotating only).
+
+If you are a beginner to Tangram you should try the first 10 figures.
+The other ones are not sorted, some of them are very difficult (to my
+taste).
+
+When a figure has been solved the background color of the silhouette
+area changes. The solved figures are remembered by saving a status
+file in the user's directory (~/.gtans/afile.figures.status for a
+figure file called afile.figures)
+
+.B Show a tan
+This button shows the position of a tan. Each further click will display
+an other tan.
+
+.B Show outline
+Draw the figure in the main area. This makes the game much easier.
+
+.B Preferences
+Most of this menu's options allow you to change the colors used by the
+game. For the main area you may choose textures (pixmap files) instead
+of colors. Some sample files are supplied (I can't remember where I
+found them) but as the complete pathname is saved in the config file
+you can choose a file located anywhere (for example in
+/usr/share/pixmaps/). On a 8 bits display the colors may not be
+exactly what you want (GTK tries to find the best matching color).
+
+.B Preferences/Tans size/Increase
+Makes the tans 5 % bigger relatively to the game area. If you resize
+the window the tans size will be scaled.
+
+.B Preferences/Tans size/Decrease
+Makes the tans 4.76 % smaller
+
+.B Preferences/Accuracy
+Changes the precision of the comparison between the tans position and
+the solution. A lower accuracy makes the game more easy.
+
+.B Preferences/Rotation
+Step by step allows only rotation by increment of 11.5 degrees.
+Continuous rotation makes the game more difficult and you probably
+shouldn't use it unless you really dislike step by step rotation.
+
+.B Preferences/Figures file
+Allows you to choose another figures file.
+
+.B Preferences/Save config
+Save a config file in the user's home directory.
+
+.B Misc/Clear figure status
+Set the current figure as unsolved.
+
+.B Misc/Clear all figures status
+Set all the loaded figures (i.e. from the current figure file) as
+unsolved.
+
+.SH FILES
+	~/.gtans/.gtansrc
+		Configuration options for gtans.  All of  these options can be set from the interface, there should be no need to edit this file.
+
+	~/.gtans/somename.figures.status
+		 Status files (for each figures file the user played with) remenbering which figures where solved.
+
+.SH SEE ALSO
+	The gtans homepage at <http://altern.org/bwt>.
+	Additional information and documentation can also be found in /usr/share/doc/gtans/ .
+
+.BR
+.SH AUTHOR
+
+The author of gtans is Philippe Banwarth <bwt@altern.org>

@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtans VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2000-04-18 07:08+09:00\n"
+"Last-Translator: Dmytro Koval'ov <kov@tokyo.email.ne.jp>\n"
+"Language-Team: Ukrainian <linux@linux.org.ua>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=koi8-u\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "%d figures loaded."
+msgstr "Завантажено %d ф╕гур."
+
+msgid "About gTans"
+msgstr "Про gTans"
+
+msgid "About gTans..."
+msgstr "Про gTans..."
+
+msgid "About..."
+msgstr "Про..."
+
+msgid "Accuracy"
+msgstr "Точн╕сть"
+
+msgid "Background"
+msgstr "Тло"
+
+msgid "Can't load figure file."
+msgstr "Не можу прочитати файл ф╕гур."
+
+msgid "Can't read help file, Sorry."
+msgstr "Вибачаюсь. Не можу прочитати файл п╕дказок."
+
+msgid "Can't save config file."
+msgstr "Не можу записати файл конф╕╜урац╕╖."
+
+msgid "Clear all figures status"
+msgstr "Очистити статус вс╕х ф╕гур"
+
+msgid "Clear figure status"
+msgstr "Очистити статус ф╕гури"
+
+msgid "Click into to move, around to rotate. Right-click to flip."
+msgstr "Клацн╕ть всередин╕ щоб пересунути, б╕ля ф╕гури щоб повернути. Права кнопка мишки - щоб перевернути."
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Color..."
+msgstr "Кол╕р..."
+
+msgid "Continuous"
+msgstr "Неперервне"
+
+msgid "Decrease"
+msgstr "Зменшити"
+
+msgid "Figure "
+msgstr "Ф╕гура"
+
+msgid "Figures file..."
+msgstr "Файл ф╕гур..."
+
+msgid "Game"
+msgstr "Гра"
+
+msgid "Help tan color..."
+msgstr "Кол╕р моза╖ки п╕дказки..."
+
+msgid "Help..."
+msgstr "П╕дказка..."
+
+msgid "High"
+msgstr "Високий"
+
+msgid "Hilighted tan"
+msgstr "П╕дсв╕чена моза╖ка"
+
+msgid "Increase"
+msgstr "Зб╕льшити"
+
+msgid "Low"
+msgstr "Низький"
+
+msgid "Medium"
+msgstr "Середн╕й"
+
+msgid "Misc."
+msgstr "Р╕зне"
+
+msgid "No figure loaded."
+msgstr "Жодна ф╕гура не завантажена."
+
+msgid "Outline help color..."
+msgstr "Кол╕р п╕дказки вид╕ленням..."
+
+msgid "Preferences"
+msgstr "Установки"
+
+msgid "Quit"
+msgstr "Вих╕д"
+
+msgid "Rotation"
+msgstr "Обертання"
+
+msgid "Save config"
+msgstr "Записати конф╕╜урац╕ю"
+
+msgid "Select a color..."
+msgstr "Вибер╕ть кол╕р..."
+
+msgid "Select a figures file..."
+msgstr "Вибер╕ть файл ф╕гур..."
+
+msgid "Select a file"
+msgstr "Вибер╕ть файл"
+
+msgid "Select a tan."
+msgstr "Вибер╕ть моза╖ку."
+
+msgid "Select a texture (xpm file)..."
+msgstr "Вибер╕ть заливку (файл xpm)"
+
+msgid "Select color"
+msgstr "Виб╕р кольору"
+
+msgid "Show a tan"
+msgstr "Показувати моза╖ки"
+
+msgid "Show outline"
+msgstr "Показувати обводи"
+
+msgid "Silhouette background..."
+msgstr "Тло силуету..."
+
+msgid "Silhouette color..."
+msgstr "Кол╕р силуету..."
+
+msgid "Solved figure bg..."
+msgstr "Тло розв'язано╖ ф╕гури..."
+
+msgid "Step by step"
+msgstr "Крок за кроком"
+
+msgid "Tans"
+msgstr "Моза╖ки"
+
+msgid "Tans size"
+msgstr "Розм╕р моза╖к"
+
+msgid "Texture..."
+msgstr "Заливка..."
+
+msgid "Unselect tan"
+msgstr "В╕дм╕нити виб╕р моза╖ки"
+
+msgid "User config file saved."
+msgstr "Файл конф╕╜урац╕╖ записано."
+
+msgid "Well done. Try another one ?"
+msgstr "Чудово. Спробу╓ш ще?"
+
+msgid "gTans help"
+msgstr "П╕дказка по gTans"
+
+msgid "gTans help..."
+msgstr "П╕дказка по gTans..."
