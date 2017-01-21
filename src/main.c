@@ -1,7 +1,5 @@
 /*
- * Copyright (C) 1999  Philippe Banwarth
- * email: bwt@altern.org
- * smail: Philippe Banwarth, 8 sente du milieu des Gaudins, 95150 Taverny, France.
+ * Copyright (C) 2017  Matthias Rustler
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
