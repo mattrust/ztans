@@ -1,6 +1,8 @@
 
 /*
- * Copyright (C) 2017  Matthias Rustler
+ * Copyright (C) 1999  Philippe Banwarth
+ * email: bwt@altern.org
+ * smail: Philippe Banwarth, 8 sente du milieu des Gaudins, 95150 Taverny, France.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,6 +23,7 @@
 #  include <config.h>
 #endif
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -274,8 +277,8 @@ void
 on_mabout_activate                     (GtkMenuItem     *menuitem,
                                         gpointer         user_data)
 {
-  tanstatpush(_("About gTans..."));
-  gtk_widget_show(create_aboutwindow());
+//  tanstatpush(_("About gTans..."));
+  create_aboutwindow();
 }
 
 
@@ -284,7 +287,9 @@ on_mhelp_activate                      (GtkMenuItem     *menuitem,
                                         gpointer         user_data)
 {
   FILE *hlpfile;
-  GtkWidget *helpwindow,*hlptext;
+  GtkWidget *helpwindow, *whltext;
+  GtkTextBuffer *hlptext;
+  GtkTextIter iter;
   char buffer[1024];
   int nchars;
   char helpfile[1024], *helpfile_ext;
@@ -292,7 +297,9 @@ on_mhelp_activate                      (GtkMenuItem     *menuitem,
   char filext[4];
 
   helpwindow = create_helpwindow ();
-  hlptext = lookup_widget (GTK_WIDGET (helpwindow), "whltext");
+  whltext = lookup_widget (GTK_WIDGET (helpwindow), "whltext");
+  hlptext = gtk_text_buffer_new (NULL);
+  gtk_text_buffer_get_end_iter (hlptext, &iter);
 
   if (! (helpfile_ext = g_getenv("LANG")))
     helpfile_ext = "";
@@ -306,17 +313,16 @@ on_mhelp_activate                      (GtkMenuItem     *menuitem,
        (hlpfile=fopen(helpfiledef,"r"))!=NULL ) {
     while (!feof(hlpfile)) {
       nchars = fread(buffer, 1, 1024, hlpfile);
-      gtk_text_insert (GTK_TEXT (hlptext), NULL, NULL,
-		       NULL, buffer, nchars);
+      gtk_text_buffer_insert (hlptext, &iter, buffer, nchars);
     }
     fclose (hlpfile);
   }
   else {
-    gtk_text_insert (GTK_TEXT (hlptext), NULL, NULL,
-		     NULL, _("Can't read help file, Sorry."), -1);
+    gtk_text_buffer_insert (hlptext, &iter, _("Can't read help file, Sorry."), -1);
   }
   
   tanstatpush(_("gTans help..."));
+  gtk_text_view_set_buffer (GTK_TEXT_VIEW (whltext), hlptext);
   gtk_widget_show (helpwindow);
   
 }
@@ -328,8 +334,8 @@ on_wdrawareagrande_expose_event        (GtkWidget       *widget,
                                         gpointer         user_data)
 {
   if (pixmapgrande1!=NULL)
-    gdk_draw_pixmap(widget->window,
-		    widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
+    gdk_draw_drawable(widget->window,
+		    widget->style->fg_gc[gtk_widget_get_state(widget)],
 		    pixmapgrande1,
 		    event->area.x, event->area.y,
 		    event->area.x, event->area.y,
@@ -353,8 +359,8 @@ on_wdrawareagrande_configure_event     (GtkWidget       *widget,
     taninitcbgr();
 
   if (pixmapgrande1!=NULL){
-    gdk_pixmap_unref(pixmapgrande1);
-    gdk_pixmap_unref(pixmapgrande2);
+    g_object_unref(pixmapgrande1);
+    g_object_unref(pixmapgrande2);
   }
 
   pixmapgrande1 = gdk_pixmap_new(widget->window,
@@ -535,7 +541,7 @@ on_wdrawareapetite_configure_event     (GtkWidget       *widget,
     taninitcbpe();
 
   if (pixmappetite!=NULL)
-    gdk_pixmap_unref(pixmappetite);
+    g_object_unref(pixmappetite);
   
   pixmappetite = gdk_pixmap_new(widget->window,
 				widget->allocation.width,
@@ -554,8 +560,8 @@ on_wdrawareapetite_expose_event        (GtkWidget       *widget,
                                         gpointer         user_data)
 {
   if (pixmappetite!=NULL)
-    gdk_draw_pixmap(widget->window,
-		    widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
+    gdk_draw_drawable(widget->window,
+		    widget->style->fg_gc[gtk_widget_get_state(widget)],
 		    pixmappetite,
 		    event->area.x, event->area.y,
 		    event->area.x, event->area.y,
@@ -635,7 +641,7 @@ void filselinit (int col)
   if (filselwin==NULL)
     filselwin = create_fileselectwindow();
   
-  gtk_file_selection_set_filename (GTK_FILE_SELECTION(filselwin),filename);
+  gtk_file_chooser_set_filename (GTK_FILE_CHOOSER(filselwin),filename);
   
   gtk_widget_show (filselwin);
   gdk_window_raise (filselwin->window);
@@ -665,7 +671,7 @@ on_bfsok_clicked                       (GtkButton       *button,
 
 
   tanstatpop();
-  filename=gtk_file_selection_get_filename (GTK_FILE_SELECTION (filselwin));
+  filename=gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (filselwin));
   
   if (filselnr==FIGGC){
     if (tanloadfigtab(filename)){
@@ -707,33 +713,21 @@ static int colselnr;
 
 void color_changed_cb (GtkWidget *widget, GtkColorSelection *colorsel)
 {
-  gdouble flcolor[3];
-  
-  
-  gtk_color_selection_get_color (colorsel,flcolor);
-  colselcolor.red = (gushort)(flcolor[0]*65535.0);
-  colselcolor.green = (gushort)(flcolor[1]*65535.0);
-  colselcolor.blue = (gushort)(flcolor[2]*65535.0);
-  
+  gtk_color_selection_get_current_color (colorsel,&colselcolor);
 }
 
 
 void colselinit (int col)
 {
-  gdouble flcolor[3];
-  
   if (colselwin==NULL){
     colselwin = create_colorselectwindow();
     clrsel = GTK_COLOR_SELECTION_DIALOG(colselwin)->colorsel;
-    gtk_signal_connect(GTK_OBJECT(clrsel),"color_changed",
-		       (GtkSignalFunc)color_changed_cb, (gpointer)clrsel);
+    g_signal_connect(G_OBJECT(clrsel),"color_changed",
+		       (GCallback)color_changed_cb, (gpointer)clrsel);
   }
   
   colselcolor = colortab[col];
-  flcolor[0] = (gdouble)(colselcolor.red/65535.0);
-  flcolor[1] = (gdouble)(colselcolor.green/65535.0);
-  flcolor[2] = (gdouble)(colselcolor.blue/65535.0);
-  gtk_color_selection_set_color(GTK_COLOR_SELECTION(clrsel),flcolor);
+  gtk_color_selection_set_current_color(GTK_COLOR_SELECTION(clrsel),&colselcolor);
   gtk_widget_show (colselwin);
   gdk_window_raise (colselwin->window);
   

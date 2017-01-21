@@ -5,5 +5,5 @@
 GtkWidget* create_mainwindow (void);
 GtkWidget* create_fileselectwindow (void);
 GtkWidget* create_colorselectwindow (void);
-GtkWidget* create_aboutwindow (void);
+void create_aboutwindow (void);
 GtkWidget* create_helpwindow (void);

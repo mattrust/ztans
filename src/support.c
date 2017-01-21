@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include <string.h>
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
 #include "support.h"
@@ -39,8 +40,8 @@ lookup_widget                          (GtkWidget       *widget,
       widget = parent;
     }
 
-  found_widget = (GtkWidget*) gtk_object_get_data (GTK_OBJECT (widget),
-                                                   widget_name);
+  found_widget = (GtkWidget*) g_object_get_data (G_OBJECT (widget),
+                                                 widget_name);
   if (!found_widget)
     g_warning ("Widget not found: %s", widget_name);
   return found_widget;
@@ -69,9 +70,9 @@ create_dummy_pixmap                    (GtkWidget       *widget)
                                                      NULL, dummy_pixmap_xpm);
   if (gdkpixmap == NULL)
     g_error ("Couldn't create replacement pixmap.");
-  pixmap = gtk_pixmap_new (gdkpixmap, mask);
-  gdk_pixmap_unref (gdkpixmap);
-  gdk_bitmap_unref (mask);
+  pixmap = gtk_image_new_from_pixmap (gdkpixmap, mask);
+  g_object_unref (gdkpixmap);
+  g_object_unref (mask);
   return pixmap;
 }
 
@@ -129,9 +130,9 @@ create_pixmap                          (GtkWidget       *widget,
       return create_dummy_pixmap (widget);
     }
   g_free (found_filename);
-  pixmap = gtk_pixmap_new (gdkpixmap, mask);
-  gdk_pixmap_unref (gdkpixmap);
-  gdk_bitmap_unref (mask);
+  pixmap = gtk_image_new_from_pixmap (gdkpixmap, mask);
+  g_object_unref (gdkpixmap);
+  g_object_unref (mask);
   return pixmap;
 }
 

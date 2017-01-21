@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2000-03-14 12:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: callbacks.c:269
+msgid "User config file saved."
+msgstr "Configuración del usuario guardada."
+
+#: callbacks.c:271
+msgid "Can't save config file."
+msgstr "No puedo guardar el archivo de configuración."
+
+#: callbacks.c:279
+msgid "About gTans..."
+msgstr "Acerca de gTans..."
+
+#: callbacks.c:318
+msgid "Can't read help file, Sorry."
+msgstr "Lo siento. No puedo leer el archivo de ayuda."
+
+#: callbacks.c:321
+msgid "gTans help..."
+msgstr "Ayuda de gTans..."
+
+#: callbacks.c:451
+msgid "Click into to move, around to rotate. Right-click to flip."
+msgstr ""
+"Click adentro para mover y alrededor para rotar. Click derecho para voltear"
+
+#: callbacks.c:473
+msgid "Well done. Try another one ?"
+msgstr "Bien hecho. ¿Intentar otro?"
+
+#: callbacks.c:630
+msgid "Select a figures file..."
+msgstr "Seleccionar un archivo de figuras..."
+
+#: callbacks.c:634
+msgid "Select a texture (xpm file)..."
+msgstr "Seleccionar una textura (archivo xpm)..."
+
+#: callbacks.c:675
+#, c-format
+msgid "%d figures loaded."
+msgstr "%d figuras cargadas."
+
+#: callbacks.c:680
+msgid "Can't load figure file."
+msgstr "No pude abrir el archivo de figuras."
+
+#: callbacks.c:742
+msgid "Select a color..."
+msgstr "Selecciona un color..."
+
+#: interface.c:127
+msgid "Game"
+msgstr "Juego"
+
+#: interface.c:143
+msgid "Quit"
+msgstr "Salir"
+
+#: interface.c:151
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: interface.c:167
+msgid "Tans"
+msgstr "Piezas"
+
+#: interface.c:183 interface.c:215 interface.c:247
+msgid "Color..."
+msgstr "Color..."
+
+#: interface.c:191 interface.c:223 interface.c:255
+msgid "Texture..."
+msgstr "Textura..."
+
+#: interface.c:199
+msgid "Hilighted tan"
+msgstr "Pieza resaltada"
+
+#: interface.c:231
+msgid "Background"
+msgstr "Fondo"
+
+#: interface.c:263
+msgid "Outline help color..."
+msgstr "Color del contorno de ayuda..."
+
+#: interface.c:280
+msgid "Silhouette color..."
+msgstr "Color de silueta..."
+
+#: interface.c:288
+msgid "Silhouette background..."
+msgstr "Fondo de silueta"
+
+#: interface.c:296
+msgid "Solved figure bg..."
+msgstr "Fondo de figura resuelta"
+
+#: interface.c:304
+msgid "Help tan color..."
+msgstr "Color de la pieza de ayuda..."
+
+#: interface.c:321
+msgid "Tans size"
+msgstr "Tamaño de las piezas"
+
+#: interface.c:337
+msgid "Increase"
+msgstr "Aumentar"
+
+#: interface.c:345
+msgid "Decrease"
+msgstr "Reducir"
+
+#: interface.c:353
+msgid "Accuracy"
+msgstr "Precisión"
+
+#: interface.c:369
+msgid "High"
+msgstr "Alto"
+
+#: interface.c:378
+msgid "Medium"
+msgstr "Medio"
+
+#: interface.c:387
+msgid "Low"
+msgstr "Bajo"
+
+#: interface.c:397
+msgid "Rotation"
+msgstr "Rotación"
+
+#: interface.c:413
+msgid "Continuous"
+msgstr "Continuo"
+
+#: interface.c:422
+msgid "Step by step"
+msgstr "Paso a paso"
+
+#: interface.c:441
+msgid "Figures file..."
+msgstr "Archivo de figuras..."
+
+#: interface.c:458
+msgid "Save config"
+msgstr "Guardar configuración"
+
+#: interface.c:466
+msgid "Misc."
+msgstr "Misceláneo"
+
+#: interface.c:482
+msgid "About..."
+msgstr "Acerca de..."
+
+#: interface.c:490
+msgid "Help..."
+msgstr "Ayuda..."
+
+#: interface.c:507
+msgid "Clear figure status"
+msgstr "Borrar estado de la figura"
+
+#: interface.c:515
+msgid "Clear all figures status"
+msgstr "Borrar estado de todas las figuras"
+
+#: interface.c:588
+msgid "Figure "
+msgstr "Figura "
+
+#: interface.c:615
+msgid "Unselect tan"
+msgstr "Deseleccionar pieza"
+
+#: interface.c:640
+msgid "Show a tan"
+msgstr "Mostrar una pieza"
+
+#: interface.c:649
+msgid "Show outline"
+msgstr "Mostrar contorno"
+
+#: interface.c:791
+msgid "Select a file"
+msgstr "Seleccionar un archivo"
+
+#: interface.c:831
+msgid "Select color"
+msgstr "Seleccionar un color"
+
+#: interface.c:880
+msgid "About gTans"
+msgstr "Acerca de gTans"
+
+#: interface.c:904 interface.c:967
+msgid "Close"
+msgstr "Cerrar"
+
+#: interface.c:935
+msgid "gTans help"
+msgstr "Ayuda de gTans"
+
+#: main.c:1802
+msgid "Select a tan."
+msgstr "Seleccionar una pieza."
+
+#: main.c:1804
+msgid "No figure loaded."
+msgstr "Ninguna figura cargada."
+
+

@@ -1,5 +1,7 @@
 /*
- * Copyright (C) 2017  Matthias Rustler
+ * Copyright (C) 1999  Philippe Banwarth
+ * email: bwt@altern.org
+ * smail: Philippe Banwarth, 8 sente du milieu des Gaudins, 95150 Taverny, France.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,9 +22,11 @@
 #  include <config.h>
 #endif
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <math.h>
 #include <stdio.h>
+#include <string.h>
 
 /* uniquement pour mkdir() */
 #include <sys/stat.h>
@@ -804,8 +808,8 @@ void tandrawselect(int dx, int dy, int drot){
   dumrot=selpiece->rot;
   rotnew=selpiece->rot-=drot;
 
-  gdk_draw_pixmap(pixmapgrande1,
-		  widgetgrande->style->fg_gc[GTK_WIDGET_STATE (widgetgrande)],
+  gdk_draw_drawable(pixmapgrande1,
+		  widgetgrande->style->fg_gc[gtk_widget_get_state(widgetgrande)],
 		  pixmapgrande2,
 		  selbackrect.x,selbackrect.y,
 		  selbackrect.x,selbackrect.y,
@@ -816,8 +820,11 @@ void tandrawselect(int dx, int dy, int drot){
 		      zoom,
 		      TAN_PIECEHI);
 
-  gtk_widget_draw (widgetgrande, &selbackrect);
-  gtk_widget_draw (widgetgrande, &selbk2);
+  gtk_widget_queue_draw_area (widgetgrande, selbackrect.x, selbackrect.y,
+                              selbackrect.width,selbackrect.height);
+  gtk_widget_queue_draw_area (widgetgrande, selbk2.x, selbk2.y,
+                              selbk2.width, selbk2.height);
+  gdk_window_process_updates (gtk_widget_get_window (widgetgrande), FALSE);
 
   selbackrect=selbk2;
 
@@ -845,7 +852,8 @@ void tanredrawgrande (void){
     tandrawfigure(widget, pixmapgrande1, &figgrande, PIECENBR+1, TAN_PIECENOR);
     rect.width=widget->allocation.width;
     rect.height=widget->allocation.height;
-    gtk_widget_draw (widget, &rect);
+    gtk_widget_queue_draw_area (widget, rect.x, rect.y, rect.width, rect.height);
+    gdk_window_process_updates (gtk_widget_get_window (widget), FALSE);
   }
   
 }
@@ -899,7 +907,8 @@ void tanredrawpetite (void){
   
   rect.width=wid;
   rect.height=hei;
-  gtk_widget_draw (widgetpetite, &rect);
+  gtk_widget_queue_draw_area (widgetpetite, rect.x, rect.y, rect.width, rect.height);
+  gdk_window_process_updates (gtk_widget_get_window (widgetpetite), FALSE);
 
 }
 
@@ -922,7 +931,7 @@ void tanloadfigstatus (char *name, tanfigure *nfigtab, int nfigsize){
   FILE *hand=NULL;
   gchar *statusfilename;
   
-  statusfilename = g_strconcat(usergtdir, G_DIR_SEPARATOR_S, g_basename(name), ".status", NULL);
+  statusfilename = g_strconcat(usergtdir, G_DIR_SEPARATOR_S, g_path_get_basename(name), ".status", NULL);
   
   if ( (hand = fopen(statusfilename, "r"))!=NULL ){
     for (i=0; i<nfigsize; i++)
@@ -944,7 +953,7 @@ void tansavefigstatus (char *name, tanfigure *nfigtab, int nfigsize){
   gchar *statusfilename;
   
   if(figtabsize){
-    statusfilename = g_strconcat(usergtdir, G_DIR_SEPARATOR_S, g_basename(name), ".status", NULL);
+    statusfilename = g_strconcat(usergtdir, G_DIR_SEPARATOR_S, g_path_get_basename(name), ".status", NULL);
     
     if ( (hand = fopen(statusfilename, "w"))!=NULL ){
       for (i=0; i<nfigsize; i++)
@@ -1061,7 +1070,7 @@ gboolean tansetpixmapmode(GtkWidget *widget, char *aname, int gcnbr){
   }
   
   if (pixmap!=NULL)
-    gdk_pixmap_unref(pixmap);
+    g_object_unref(pixmap);
   
   ret=FALSE;
   if ( (pixmap=gdk_pixmap_create_from_xpm (widget->window, NULL, NULL, aname))!=NULL ){
@@ -1106,7 +1115,7 @@ void tansetcolormode(GdkColor *acolor, int gcnbr){
     tabpxpixmode[gcnbr] = FALSE;
     if ( (pixmap = tabpxpx[gcnbr])!=NULL ){
       tabpxpx[gcnbr] = NULL;
-      gdk_pixmap_unref(pixmap);
+      g_object_unref(pixmap);
     }  
   }
   
@@ -1921,33 +1930,33 @@ void tanend(void){
     g_free(figtab);
   
   if (pixmappetite!=NULL)
-    gdk_pixmap_unref(pixmappetite);
+    g_object_unref(pixmappetite);
   if (pixmapgrande1!=NULL)
-    gdk_pixmap_unref(pixmapgrande1);
+    g_object_unref(pixmapgrande1);
   if (pixmapgrande2!=NULL)
-    gdk_pixmap_unref(pixmapgrande2);
+    g_object_unref(pixmapgrande2);
   if (pixmappiece1!=NULL)
-    gdk_pixmap_unref(pixmappiece1);
+    g_object_unref(pixmappiece1);
   if (pixmappiece2!=NULL)
-    gdk_pixmap_unref(pixmappiece2);
+    g_object_unref(pixmappiece2);
   if (pixmapfond!=NULL)
-    gdk_pixmap_unref(pixmapfond);
+    g_object_unref(pixmapfond);
   
   for (i=PXSTART; i<PXSTART+PXNBR; i++){
     if (tabpxpx[i]!=NULL)
-      gdk_pixmap_unref(tabpxpx[i]);
+      g_object_unref(tabpxpx[i]);
     if (tabpxnam[i]!=NULL)
       g_free(tabpxnam[i]);
   }
 
   for (i = 0; i<GCNBR; i++){
     if (tabgc[i]!=NULL)
-      gdk_gc_unref(tabgc[i]);
+      g_object_unref(tabgc[i]);
     if (tabcolalloc[i])
       gdk_colormap_free_colors (syscmap, &colortab[i], 1);
   }  
 
-  gdk_gc_unref(invertgc);
+  g_object_unref(invertgc);
 
   gtk_main_quit ();
 }

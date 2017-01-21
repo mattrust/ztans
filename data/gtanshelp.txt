@@ -1,0 +1,126 @@
+Rules of the game
+-=-=-=-=-=-=-=-=-
+
+move the pieces (known as tans) until they match the figure drawn on
+the right window (the silhouette). You must always use the seven tans
+and they should not be laid on top of one another.
+
+To move a tan, click and drag it with left mouse button, for rotation
+click AROUND it. You can flip the selected tan by right-clicking. This
+is usefull for the parallelogram tan (all positions can not be reached
+by rotating only).
+
+If you are a beginner to Tangram you should try the first 10 figures
+of the default.figures file. The other ones are not sorted, some of
+them are very difficult (to my taste).
+
+When a figure has been solved the background color of the silhouette
+area changes. The solved figures are remembered by saving a status
+file in the user's directory (~/.gtans/afile.figures.status for a
+figure file called afile.figures)
+
+
+Show a tan
+-=-=-=-=-=
+
+This button shows the position of a tan. Each further click will
+display an other tan.
+
+
+Show outline
+-=-=-=-=-=-=
+
+Draw the figure in the main area. This makes the game much easier.
+
+
+Preferences
+-=-=-=-=-=-
+
+Most of this menu's options allow you to change the colors used by the
+game. For the main area you may choose textures (pixmap files) instead
+of colors. Some sample files are supplied (I can't remember where I
+found them) but as the complete pathname is saved in the config file
+you can choose a file located anywhere (for example in
+/usr/share/pixmaps/). On a 8 bits display the colors may not be
+exactly what you want (GTK tries to find the best matching color).
+
+
+Preferences/Tans size/Increase
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Makes the tans 5 % bigger relatively to the game area. If you resize
+the window the tans size will be scaled.
+
+
+Preferences/Tans size/Decrease
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Makes the tans 4.76 % smaller.
+
+
+Preferences/Accuracy
+-=-=-=-=-=-=-=-=-=-=
+
+Changes the precision of the comparison between the tans position and
+the solution. A lower accuracy makes the game more easy.
+
+
+Preferences/Rotation
+-=-=-=-=-=-=-=-=-=-=
+
+Step by step allows only rotation by increment of 11.5 degrees.
+Continuous rotation makes the game more difficult and you probably
+shouldn't use it unless you really dislike step by step rotation.
+
+
+Preferences/Figures file
+-=-=-=-=-=-=-=-=-=-=-=-=
+
+Allows you to choose another figures file.
+
+
+Preferences/Save config
+-=-=-=-=-=-=-=-=-=-=-=-
+
+Save a config file in the user's home directory (~/.gtans/.gtansrc).
+
+
+Misc/Clear figure status
+-=-=-=-=-=-=-=-=-=-=-=-=
+
+Set the current figure as unsolved.
+
+
+Misc/Clear all figures status
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Set all the loaded figures (i.e. from the current figure file) as
+unsolved.
+
+
+To do:
+-=-=-=
+
+-a figure editor (at last!).
+-add more figures.
+-Gnome version.
+
+
+
+Copyright (C) 1999  Philippe Banwarth
+email: bwt@altern.org
+smail: Philippe Banwarth, 8 sente du milieu des Gaudins, 95150 Taverny, France.
+ 
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+ 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA

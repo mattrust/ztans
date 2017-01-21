@@ -1,0 +1,125 @@
+Zasady gry
+-=-=-=-=-=
+
+Przesuwaj fragmenty (ich nazwa to 'tany'), dopóki nie u³o¿± siê w
+figurê narysowan± po prawej stronie okna (sylwetka.) Zawsze musisz
+u¿yæ siedem tanów. Nie mog± one te¿ le¿eæ na sobie.
+
+Aby przesun±æ tan, kliknij na nim lewym przyciskiem myszy. Aby go
+obróciæ kliknij POZA nim. Mo¿esz odbiæ wybrany tan naciskaj±c prawy
+przycisk myszy -- przydaje siê to przy równoleg³obocznym tanie (nie
+mo¿na osi±gn±c wszystkich pozycji tylko przez obracanie.)
+
+Je¿eli jeste¶ pocz±tkuj±cym, powiniene¶ najpierw u³o¿yæ pierwsze 10
+figur z pliku default.figures. Nastêpne nie s± posortowane, niektóre
+z nich s± bardzo trudne.
+
+Gdy figura zosta³a u³o¿ona, kolor t³a sylwetki zmienia siê. U³o¿one
+figury s± zapamiêtywane w pliku znajduj±cym siê w katalogu domowym
+u¿ytkownika. (~/.gtans/nazwapliku.figures.status)
+
+
+Poka¿ tan
+-=-=-=-=-
+
+Ten przycisk pokazuje po³o¿enie tana. Ka¿de nastêpne przyci¶niêcie
+poka¿e nastêpnego tana.
+
+
+Poka¿ obwódkê
+-=-=-=-=-=-=-
+
+Rysuje figurê w obszarze g³ównym. Dziêki temu gra staje siê du¿o
+prostsza.
+
+
+Ustawienia
+-=-=-=-=-=
+
+Wiêkszo¶æ opcji z tego menu pozwala zmieniaæ kolory u¿ywane przez grê.
+Dla obszaru g³ównego mo¿esz te¿ wybraæ tekstury zamiast kolorów. Kilka
+przyk³adowych plików zosta³o za³±czonych (nie pamiêtam gdzie je
+znalez³em.) Na wy¶wietlaczach o¶miobitowych kolory mog± nie do koñca
+siê zgadzaæ (GTK próbuje znale¼æ najbli¿szy kolor.)
+
+
+Ustawienia/Rozmiar tanów/Zwiêksz
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Powiêksza tany o 5% w stosunku do obszaru gry. Je¿eli zmienisz rozmiar
+okna, tany te¿ zostan± przeskalowane.
+
+
+Ustawienia/Rozmiar tanów/Zmniejsz
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Tany staj± siê 4.76% mniejsze.
+
+
+Ustawienia/Dok³adno¶æ
+-=-=-=-=-=-=-=-=-=-=-
+
+Zmienia precyzjê porównania pozycji tanów i rozwi±zania. Ni¿sza
+dok³adno¶æ czyni grê ³atwiejsz±.
+
+
+Ustawienia/Obroty
+-=-=-=-=-=-=-=-=-
+
+Krok po kroku pozwala tylko na obroty co 11.5 stopnia. Rotacja
+ci±g³a sprawia, ¿e gra jest trudniejsza; jej u¿ycie nie jest
+zalecane poza krytycznymi przypadkami niechêci obracania krokowego.
+
+
+Ustawienia/Plik z figurami
+-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Pozwala wybraæ inny plik z figurami.
+
+
+Ustawienia/Zapisz konfiguracjê
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Zapisuje konfiguracjê w katalogu domowym. (~/.gtans/.gtansrc)
+
+
+Ró¿ne/Wyczy¶æ status figury
+-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Ustawia aktualn± figurê jako nieu³o¿on±.
+
+
+Ró¿ne/Wyczy¶æ status wszystkich figur
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Ustawia wszystkie za³adowane figury (tzn. z aktualnego pliku figur)
+jako nieu³o¿one.
+
+
+Do zrobienia:
+-=-=-=-=-=-=-
+
+- edytor figur (w koñcu!)
+- wiêcej figur
+- wersje Gnome
+
+
+
+
+Copyright (C) 1999  Philippe Banwarth
+email: bwt@altern.org
+smail: Philippe Banwarth, 8 sente du milieu des Gaudins, 95150 Taverny, France.
+ 
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+ 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA

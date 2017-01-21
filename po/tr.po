@@ -1,0 +1,263 @@
+# Translation of gtans.po to Turkish
+# This file is distributed under the same license as the gtans package.
+# Copyright (C) 2003 GTans'S COPYRIGHT HOLDER
+# Arman Aksoy <armish@linux-sevenler.de>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtans\n"
+"POT-Creation-Date: 2003-02-20 21:45+0200\n"
+"PO-Revision-Date: 2003-02-21 17:17+0200\n"
+"Last-Translator: Arman Aksoy <armish@linux-sevenler.de>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: callbacks.c:269
+msgid "User config file saved."
+msgstr "Kullanıcı ayar dosyası kaydedildi."
+
+#: callbacks.c:271
+msgid "Can't save config file."
+msgstr "Ayar dosyası kaydedilemedi."
+
+#: callbacks.c:279
+msgid "About gTans..."
+msgstr "gTans Hakkında..."
+
+#: callbacks.c:318
+msgid "Can't read help file, Sorry."
+msgstr "Yardım dosyası okunamıyor, Üzgünüm."
+
+#: callbacks.c:321
+msgid "gTans help..."
+msgstr "gTans yardım..."
+
+#: callbacks.c:451
+msgid "Click into to move, around to rotate. Right-click to flip."
+msgstr "Hareket ettirmek ve oynatmak için sol , çevirmek için sağ tıklayın."
+
+#: callbacks.c:473
+msgid "Well done. Try another one ?"
+msgstr "Tebrikler. Başka bir tane denemek ister misiniz ?"
+
+#: callbacks.c:630
+msgid "Select a figures file..."
+msgstr "Bir şekil dosyası seçin..."
+
+#: callbacks.c:634
+msgid "Select a texture (xpm file)..."
+msgstr "Doku (xpm) dosyası seçin..."
+
+#: callbacks.c:675
+#, c-format
+msgid "%d figures loaded."
+msgstr "%d şekil yüklendi."
+
+#: callbacks.c:680
+msgid "Can't load figure file."
+msgstr "Şekil dosyası yüklenemedi."
+
+#: callbacks.c:742
+msgid "Select a color..."
+msgstr "Bir renk seçin..."
+
+#: interface.c:106
+msgid "gTans"
+msgstr "gTans"
+
+#: interface.c:125
+msgid "Game"
+msgstr "Oyun"
+
+#: interface.c:141
+msgid "Quit"
+msgstr "Çık"
+
+#: interface.c:149
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: interface.c:165
+msgid "Tans"
+msgstr "Parçalar"
+
+#: interface.c:181 interface.c:213 interface.c:245
+msgid "Color..."
+msgstr "Renk..."
+
+#: interface.c:189 interface.c:221 interface.c:253
+msgid "Texture..."
+msgstr "Doku..."
+
+#: interface.c:197
+msgid "Hilighted tan"
+msgstr "Seçilen parça"
+
+#: interface.c:229
+msgid "Background"
+msgstr "Arkaplan"
+
+#: interface.c:261
+msgid "Outline help color..."
+msgstr "Belirtilen yardım rengi..."
+
+#: interface.c:278
+msgid "Silhouette color..."
+msgstr "Karaltı rengi..."
+
+#: interface.c:286
+msgid "Silhouette background..."
+msgstr "Karaltı arkaplanı..."
+
+#: interface.c:294
+msgid "Solved figure bg..."
+msgstr "Çözülen şeklin arkaplanı..."
+
+#: interface.c:302
+msgid "Help tan color..."
+msgstr "Yardımcı parça rengi..."
+
+#: interface.c:319
+msgid "Tans size"
+msgstr "Parça boyutları"
+
+#: interface.c:335
+msgid "Increase"
+msgstr "Büyüt"
+
+#: interface.c:343
+msgid "Decrease"
+msgstr "Küçült"
+
+#: interface.c:351
+msgid "Accuracy"
+msgstr "İncelik"
+
+#: interface.c:367
+msgid "High"
+msgstr "Yüksek"
+
+#: interface.c:376
+msgid "Medium"
+msgstr "Orta"
+
+#: interface.c:385
+msgid "Low"
+msgstr "Düşük"
+
+#: interface.c:395
+msgid "Rotation"
+msgstr "Dönüş"
+
+#: interface.c:411
+msgid "Continuous"
+msgstr "Devamlı"
+
+#: interface.c:420
+msgid "Step by step"
+msgstr "Adım-Adım"
+
+#: interface.c:439
+msgid "Figures file..."
+msgstr "Şekil dosyası..."
+
+#: interface.c:456
+msgid "Save config"
+msgstr "Ayarları kaydet"
+
+#: interface.c:464
+msgid "Misc."
+msgstr "Diğer"
+
+#: interface.c:480
+msgid "About..."
+msgstr "Hakkında..."
+
+#: interface.c:488
+msgid "Help..."
+msgstr "Yardım..."
+
+#: interface.c:505
+msgid "Clear figure status"
+msgstr "Şekil durumunu temizle"
+
+#: interface.c:513
+msgid "Clear all figures status"
+msgstr "Tüm şekil durumlarını temizle"
+
+#: interface.c:586
+msgid "Figure "
+msgstr "Şekil "
+
+#: interface.c:613
+msgid "Unselect tan"
+msgstr "Parçanın seçimini kaldır"
+
+#: interface.c:630
+msgid "Show a tan"
+msgstr "Bir parça göster"
+
+#: interface.c:639
+msgid "Show outline"
+msgstr "Belirtileni göster"
+
+#: interface.c:778
+msgid "Select a file"
+msgstr "Bir dosya seç"
+
+#: interface.c:818
+msgid "Select color"
+msgstr "Renk seç"
+
+#: interface.c:867
+msgid "About gTans"
+msgstr "gTans Hakkında"
+
+#: interface.c:876
+msgid ""
+"gTans v1.1\n"
+"http://altern.org/bwt\n"
+"\n"
+"Philippe Banwarth\n"
+"bwt@altern.org\n"
+"\n"
+"Please send me\n"
+"comments, bug reports..."
+msgstr ""
+"gTans v1.1\n"
+"http://altern.org/bwt\n"
+"\n"
+"Philippe Banwarth\n"
+"bwt@altern.org\n"
+"\n"
+"Lütfen yorumlarınızı, hataları \n"
+"bana gönderin..."
+
+#: interface.c:891 interface.c:954
+msgid "Close"
+msgstr "Kapat"
+
+#: interface.c:922
+msgid "gTans help"
+msgstr "gTans yardım"
+
+#: main.c:1802
+msgid "Select a tan."
+msgstr "Parça seç."
+
+#: main.c:1804
+msgid "No figure loaded."
+msgstr "Şekil yüklenmedi."
+
+#: support.c:118
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr "Resim dosyası bulunamıyor: %s"
+
+#: support.c:127
+#, c-format
+msgid "Error loading pixmap file: %s"
+msgstr "Resim dosyası yüklenirken hata oluştu: %s"
+

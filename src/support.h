@@ -8,17 +8,6 @@
 
 #include <gtk/gtk.h>
 
-/* gettext */
-#ifdef TGTXT
-#  include <libintl.h>
-#  undef _
-#  define _(String) gettext (String)
-#else
-#  define textdomain(String) (String)
-#  define gettext(String) (String)
-#  define _(String) (String)
-#endif
-
 
 /*
  * Public Functions.

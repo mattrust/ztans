@@ -4,9 +4,9 @@
 #define AN_move 1
 #define AN_rot 2
 
-#define HELPFILE_PATH     HOMEDIR "gtanshelp%s.txt"
-#define DEFAULTFIGFILE    FIGDIR "default.figures"
-#define DEFAULTCONFIGFILE HOMEDIR "gtansrc"
+#define HELPFILE_PATH     PKGDATADIR "/gtanshelp%s.txt"
+#define DEFAULTFIGFILE    PKGDATADIR "/figures/default.figures"
+#define DEFAULTCONFIGFILE SYSCONFDIR "/gtansrc"
 #define USERHOMEDIR       ".gtans"
 #define USERCONFIG        ".gtansrc"
 
