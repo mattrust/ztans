@@ -1,3 +1,6 @@
+2017-01-21
+	* start of AROS port
+
 2012-06-26  yselkowitz
 
 	* src/Makefile.am: Drop deprecation flags for now.
