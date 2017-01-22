@@ -16,12 +16,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
-
-#include <glib/gi18n.h>
-#include <gtk/gtk.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -801,9 +795,3 @@ on_helpwindow_destroy                  (GtkObject       *object,
 {
   tanstatpop();
 }
-
-
-
-
-
-

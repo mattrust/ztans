@@ -16,19 +16,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
+#include <libraries/mui.h>
+#include <proto/muimaster.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
 #include <string.h>
 
-#include <glib/gi18n.h>
-#include <gdk/gdkkeysyms.h>
-#include <gtk/gtk.h>
-
+#include "compatibility.h"
 #include "callbacks.h"
 #include "interface.h"
 #include "main.h"
@@ -37,6 +33,7 @@
 GtkWidget*
 create_mainwindow (void)
 {
+#if 0
   GtkWidget *mainwindow;
   GtkWidget *vbox1;
   GtkWidget *menubar1;
@@ -783,11 +780,13 @@ create_mainwindow (void)
                     NULL);
 
   return mainwindow;
+#endif
 }
 
 GtkWidget*
 create_fileselectwindow (void)
 {
+#if 0
   GtkWidget *fileselectwindow;
 
   fileselectwindow = gtk_file_chooser_dialog_new (_("Select a file"),
@@ -810,11 +809,13 @@ create_fileselectwindow (void)
                     NULL);
 
   return fileselectwindow;
+#endif
 }
 
 GtkWidget*
 create_colorselectwindow (void)
 {
+#if 0
   GtkWidget *colorselectwindow;
   GtkWidget *bcsok;
   GtkWidget *bcscancel;
@@ -855,11 +856,13 @@ create_colorselectwindow (void)
                     NULL);
 
   return colorselectwindow;
+#endif
 }
 
 void
 create_aboutwindow (void)
 {
+#if 0
   const gchar *authors[] = {
     "Philippe Banwarth <bwt@altern.org>",
     "Yaakov Selkowitz <yselkowitz@users.sourceforge.net>",
@@ -889,11 +892,13 @@ create_aboutwindow (void)
                 "wrap-license", TRUE,
 #endif
                  NULL);
+#endif
 }
 
 GtkWidget*
 create_helpwindow (void)
 {
+#if 0
   GtkWidget *helpwindow;
   GtkWidget *dialog_vbox2;
   GtkWidget *scrolledwindow1;
@@ -952,5 +957,6 @@ create_helpwindow (void)
                     NULL);
 
   return helpwindow;
+#endif
 }
 

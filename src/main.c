@@ -15,13 +15,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
- 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
 
-#include <glib/gi18n.h>
-#include <gtk/gtk.h>
+#include <libraries/mui.h>
+#include <proto/muimaster.h>
+
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -32,28 +29,23 @@
 #include <fcntl.h>
 #include <unistd.h> 
 
+#include "compatibility.h"
 #include "main.h"
 #include "interface.h"
 #include "support.h"
 
 void taninitstart(void);
 
+Object *app;
+
 /********************************/
 int main (int argc, char *argv[])
 {
-   textdomain ("gtans");
-
-  gtk_set_locale ();
-  gtk_init (&argc, &argv);
-
-  /*
-    add_pixmap_directory (PACKAGE_DATA_DIR "/pixmaps");
-    add_pixmap_directory (PACKAGE_SOURCE_DIR "/pixmaps");
-  */
+  // TODO: locale
 
   taninitstart();
 
-  gtk_main ();
+  DoMethod(app, MUIM_Application_Execute);
   return 0;
 }
 
@@ -142,6 +134,7 @@ static double selposxnc,selposync;      /* position de la piece actuelle non lim
 /********************************/
 /* change la valeur max du spinbutton (si il existe) */
 void tanspinsetvalmax (int val){
+#if 0
   GtkAdjustment *adj;
 
   if (spinner!=NULL){
@@ -156,6 +149,7 @@ void tanspinsetvalmax (int val){
       tansetnewfigurepart2();
     }      
   }
+#endif
 }
 
 
@@ -2070,26 +2064,3 @@ int tanwichisselect(int x, int y){
   return (i);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

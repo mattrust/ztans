@@ -16,9 +16,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <gtk/gtk.h>
-
-
 void
 on_mainwindow_destroy                  (GtkObject       *object,
                                         gpointer         user_data);

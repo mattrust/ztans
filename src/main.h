@@ -220,17 +220,3 @@ void     tancolle (tanfigure *figure, double seuil);
 void     tanstatprov (gchar *msg);
 void     tanstatpop (void);
 void     tanstatpush (gchar *msg);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
