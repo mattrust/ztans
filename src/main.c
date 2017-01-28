@@ -22,6 +22,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /* uniquement pour mkdir() */
 #include <sys/stat.h>
@@ -1844,7 +1845,7 @@ void taninitstart(void){
   int i;
   char* accurstr;
 
-  usergtdir = g_strconcat(g_get_home_dir(), G_DIR_SEPARATOR_S USERHOMEDIR, NULL);
+  usergtdir = "ENVARC:ztans";
   mkdir(usergtdir, -1);         /* mmouais bof */
 
   for (i = PXSTART; i<PXNBR+PXSTART; i++){
@@ -1860,18 +1861,26 @@ void taninitstart(void){
   figtabsize = 0;
   tansetnewfigurepart1(-1);
 
-  userconf = g_strconcat(usergtdir, G_DIR_SEPARATOR_S USERCONFIG, NULL);
+  userconf = "ENVARC:ztans/ztansrc";
   if (!tanloadconfig(userconf) && !tanloadconfig(DEFAULTCONFIGFILE))
     tansetdefconfig();
   
   tanclampgrandefig();
   
-  mainwindow = create_mainwindow();
-  gtk_widget_show (mainwindow);
+  app = ApplicationObject,
+    MUIA_Application_Title, (IPTR)"ZTans",
+    MUIA_Application_Version, (IPTR)"1.0",
+    MUIA_Application_Copyright, (IPTR)"© 2017 Matthias Rustler",
+    MUIA_Application_Author, (IPTR)"Matthias Rustler",
+    MUIA_Application_Description, "Tangram",
+    MUIA_Application_Base, (IPTR)"ZTANS",
 
-  spinner=GTK_SPIN_BUTTON(lookup_widget(mainwindow,"bfignr"));
-  widgetstat=GTK_STATUSBAR(lookup_widget(mainwindow,"wstatusbar"));
-  statconid=gtk_statusbar_get_context_id(widgetstat,"general" );
+    SubWindow, mainwindow = create_mainwindow(),
+  End;
+
+  //spinner=GTK_SPIN_BUTTON(lookup_widget(mainwindow,"bfignr"));
+  //widgetstat=GTK_STATUSBAR(lookup_widget(mainwindow,"wstatusbar"));
+  //statconid=gtk_statusbar_get_context_id(widgetstat,"general" );
   tanstatpush("Non visible");
 
   switch (accuracy){

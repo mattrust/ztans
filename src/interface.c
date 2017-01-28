@@ -16,7 +16,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#include <libraries/gadtools.h>
 #include <libraries/mui.h>
+
 #include <proto/muimaster.h>
 
 #include <sys/types.h>
@@ -33,6 +35,174 @@
 GtkWidget*
 create_mainwindow (void)
 {
+    mainwindow = WindowObject,
+    MUIA_Window_Title, "ZTans",
+    MUIA_Window_ID, MAKE_ID('M','A','I','N'),
+    MUIA_Window_Menustrip, MenustripObject,
+      MUIA_Family_Child, MenuObject,
+        MUIA_Menu_Title, "Game",
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Quit",
+        End,
+      End,
+      MUIA_Family_Child, MenuObject,
+        MUIA_Menu_Title, "Preferences",
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Tan",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Color...",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Texture...",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Hilighted tan",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Color...",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Texture...",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Background",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Color...",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Texture...",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Outline help color",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Color...",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Texture...",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, NM_BARLABEL,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Silhouette color...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Silhouette background...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Solved figure bg...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Help tan color...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, NM_BARLABEL,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Tans size",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Increase",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Decrease",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Accuracy",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "High",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Medium",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Low",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Rotation",
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Continuous",
+          End,
+          MUIA_Family_Child, MenuitemObject,
+            MUIA_Menuitem_Title, "Step by step",
+          End,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, NM_BARLABEL,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Figures file...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, NM_BARLABEL,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Save config",
+        End,
+      End,
+      MUIA_Family_Child, MenuObject,
+        MUIA_Menu_Title, "Misc",
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "About...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Help...",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, NM_BARLABEL,
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Clear figure status",
+        End,
+
+        MUIA_Family_Child, MenuitemObject,
+          MUIA_Menuitem_Title, "Clear all figures status",
+        End,
+     End,
+    End,
+    WindowContents, VGroup,
+      Child, HGroup,
+        Child, widgetgrande = /*Canvas*/StringObject,
+        End,
+        Child, VGroup,
+          Child, widgetpetite = /*Canvas*/StringObject,
+          End,
+          // spinner
+          Child, SimpleButton("Unselect tan"),
+          Child, SimpleButton("Show a tan"),
+          Child, SimpleButton("Show outline"),
+        End,
+      End,
+      Child, widgetstat = StringObject,
+      End,
+    End,
+  End;
+
+  return mainwindow;
+  
 #if 0
   GtkWidget *mainwindow;
   GtkWidget *vbox1;
